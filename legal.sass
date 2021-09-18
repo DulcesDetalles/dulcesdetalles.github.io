@@ -1,0 +1,127 @@
+$background: #ab3a4c
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+body
+    overflow-x: hidden
+section
+    background: url('./fondo.jpg')
+    background-position: center center
+    background-size: cover
+    width: 100vw
+    height: 300px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-size: cover
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        width: 100vw
+        height: 300px
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(0, 0, 0, .5)
+    h2
+        color: #fff
+        font-size: 35px
+        position: relative
+        z-index: 5
+        font-weight: 800
+    a
+        position: absolute
+        bottom: 10px
+        right: 50px
+        color: #fff
+        text-decoration: none
+        z-index: 5
+        font-weight: 800
+main
+    padding: 40px 50px
+    font-weight: 800
+    p
+        line-height: 1.25
+        text-align: justify
+    h3
+        font-size: 25px
+        margin: 10px 0
+.loader-container
+    width: 100vw
+    height: 100vh
+    position: fixed
+    background-color: $background
+    display: flex
+    top: 0
+    align-items: center
+    justify-content: center
+    z-index: 10000000
+    transition: .5s all
+    img
+        width: 350px
+.cookies__banner
+    display: none
+    background-color: #fff
+    padding: 20px
+    width: calc( 100% - 40px )
+    max-width: 300px
+    line-height: 150%
+    border-radius: 10px
+    position: fixed
+    bottom: 20px
+    left: 20px
+    z-index: 900
+    padding-top: 40px
+    box-shadow: 0 2px 20px 10px rgba(222, 222, 222, .25)
+    text-align: center
+    .cookie__img
+        max-width: 100px
+        position: absolute
+        top: -50px
+        left: calc( 50% - 50px )
+    .cookie__title
+        font-size: 25px
+        color: #000
+        margin-top: 30px
+    .cookie__text
+        color: #000
+        font-size: 18px
+        font-weight: 800
+        margin-bottom: 5px
+    .cookie__button
+        background-color: $background
+        color: #fff
+        width: 100%
+        padding: 10px
+        font-size: 25px
+        border: none
+        border-radius: 5px
+        cursor: pointer
+    .cookie__policy
+        display: block
+        padding-top: 10px
+        color: #000
+        font-weight: 800
+        text-decoration: none
+.cookies__banner.active
+    display: block
+.background__cookies
+    display: none
+    background-color: rgba(0, 0, 0, .5)
+    position: fixed
+    z-index: 899
+    width: 100vw
+    height: 100vh
+    top: 0
+    left: 0
+.background__cookies.active
+    display: block
+@media screen and (max-width: 530px)
+    
+    .loader-container
+        img
+            width: 250px
